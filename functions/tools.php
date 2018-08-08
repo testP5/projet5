@@ -14,8 +14,7 @@ function esc_html($str){
   echo $str; 
 }
 
-function xssafe($str)
-{
+function xssafe($str){
   return htmlspecialchars($str,ENT_DISALLOWED,'UTF-8');
 }
 ?>

@@ -18,8 +18,12 @@ class Page {
           "{{ groupName }}" => $_SESSION['groupName']
         )
       );
-    }
-    echo str_replace(array_keys($change), $change, file_get_contents("pages/$toShow.html"));
+    };
+    echo htmlspecialchars(
+      str_replace(array_keys($change), $change, file_get_contents("pages/$toShow.html")),
+      ENT_DISALLOWED,
+      'UTF-8'
+    );
     $bdd = null;                   //fermeture de la connexion
     exit();                        //termine le script php
   }

@@ -1,5 +1,6 @@
 <?php
 $page = new Page();
+require_once(../functions/tools.php)
 
 /****************************
           classes
@@ -8,6 +9,7 @@ class Page {
   private $_defaultPage = "main";  //par défaut on veut afficher la page main
   public function showPage( $toShow = null, $change = null) {
     global $bdd;
+    // global xecho;
     if ( is_null($toShow) ) $toShow = $this->_defaultPage;
     if ( is_null($change) ) $change = array();
     if ( $toShow != "login" ) {
@@ -19,11 +21,7 @@ class Page {
         )
       );
     };
-    echo htmlspecialchars(
-      str_replace(array_keys($change), $change, file_get_contents("pages/$toShow.html")),
-      ENT_DISALLOWED,
-      'UTF-8'
-    );
+    xecho (str_replace(array_keys($change), $change, file_get_contents("pages/$toShow.html")));
     $bdd = null;                   //fermeture de la connexion
     exit();                        //termine le script php
   }

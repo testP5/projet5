@@ -9,12 +9,24 @@ function getUserName($user){
   return $user;
 }
 
-function esc_html($str){
-  // echo xssafe($str); 
-  echo $str; 
+// function esc_html($str){
+//   // echo xssafe($str); 
+//   echo $str; 
+// }
+
+// function xssafe($str){
+//   return htmlspecialchars($str,ENT_DISALLOWED,'UTF-8');
+// }
+
+
+//xss mitigation functions
+function xssafe($data,$encoding='UTF-8')
+{
+   return htmlspecialchars($data,ENT_QUOTES | ENT_HTML401,$encoding);
+}
+function xecho($data)
+{
+   echo xssafe($data);
 }
 
-function xssafe($str){
-  return htmlspecialchars($str,ENT_DISALLOWED,'UTF-8');
-}
 ?>

@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/*-------balises-------*/
+
+body {
+  background-color: #e6e6e6;
+  font-family: 'Open Sans', sans-serif;
+  display: table-cell;
+  vertical-align: middle;
+  width: 100vw;
+  height: 100vh;
+}
+h1 {
+  margin-bottom:0;
+}
+fieldset {
+  border-color: #e6e6e6;
+}
+form {
+  margin: auto;
+  background-color: white;
+  padding: 1em;
+  box-sizing: border-box;
+  border-radius: .25em;
+  box-shadow: 0 0 10px 0 #b5b5b5;
+}
+input {
+  display: block;
+  width: 90%;
+  margin: 1em 0;
+}
+input[type=text], input[type=password] {
+  text-indent: 10px;
+}
+label {
+  display: none;
+}
+/*ul {
+  width: 100vw;
+  background-color: #222222;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  height: 2.1em;
+  line-height: 2em;
+}
+ul li{
+  display: inline;
+  padding: .5em;
+  border-right: 1px solid white;
+}
+ul li:last-child{
+  border:none;
+}
+ul li a {
+  color: white;
+  text-decoration:  none;
+}*/
+
+/*-------classes-------*/
+.msgError {
+  text-align: center;
+}
+
+/*---------IDs---------*/
+/*#clickblock {
+  text-align: center;
+}
+#clickblock a{
+  color: black;
+}*/
+#submit {
+  color: white;
+  background: black;
+  border: 1px solid black;
+  border-radius: .25em;
+  width: auto;
+  padding: .35em;
+  float: right;
+  cursor: pointer;
+}
+
+@media screen and (max-width:480px){
+  form {
+    width: 100vw;
+  }
+  h1{
+    text-align: center;
+  }
+}
+
+
+@media screen and (min-width:481px){
+  form {
+    width: 30vw;
+  }
+  h1{
+    margin-left: 35vw;
+  }
+}

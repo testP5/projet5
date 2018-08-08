@@ -1,0 +1,660 @@
+body {
+  font-size: 20px;
+  color: #fff;
+  font-family: 'Kavivanar', cursive;
+}
+
+p {
+  line-height: 1.5;
+  margin: 30px 0;
+  text-align: justify;
+  font-size: 20px;
+  color: black;
+  text-align: justify;
+}
+
+p a {
+  text-decoration: underline;
+}
+
+h1 {
+  color: #d42c76;
+  /*color : white;*/
+  font-weight: 800;
+  font-family: 'Kavivanar', cursive;
+}
+
+h2 {
+  color: black;
+  font-weight: 800;
+  font-family: 'Kavivanar', cursive;
+  text-align: center;
+}
+
+h3 {
+  color: #494848;
+  font-weight: 800;
+  font-family: 'Kavivanar', cursive;
+  margin-top: 2em;
+  text-align: center;
+}
+
+h4 {
+  color: #fff;
+  font-weight: 800;
+  font-family: 'Kavivanar', cursive;
+}
+
+h5 {
+  font-weight: 800;
+  font-family: 'Kavivanar', cursive;
+  color: #d42c76;
+}
+
+h6 {
+  color: #d42c76;
+  font-weight: 800;
+  font-family: 'Kavivanar', cursive;
+}
+
+a {
+  color: #d42c76;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+a:focus,
+a:hover {
+  color: #d42c76;
+  color: #494848;
+}
+
+blockquote {
+  font-style: italic;
+  color: white;
+}
+
+.section-heading {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 60px;
+}
+
+.caption {
+  font-size: 14px;
+  font-style: italic;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+::-moz-selection {
+  color: white;
+  color: white;
+  text-shadow: none;
+}
+
+::selection {
+  color: #494848;
+  background: white;
+  /*color: white;
+  background: #494848;
+*/
+  text-shadow: none;
+}
+
+img::selection {
+  color: #494848;
+  background: transparent;
+  color: white;
+  /*background: transparent;*/
+}
+
+img::-moz-selection {
+  color: white;
+  background: transparent;
+  color: #d42c76;
+  /*background: transparent;*/
+}
+
+#mainNav {
+  position: fixed;
+  /*border-bottom: 1px solid white;*/
+  background-color: #fff;
+  font-family: 'Kavivanar', cursive;
+  color: #d42c76;
+}
+
+#mainNav .navbar-brand {
+  font-weight: 800;
+  color: #d42c76;
+}
+
+#mainNav .navbar-toggler {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 13px;
+  text-transform: uppercase;
+  color: white;
+}
+
+#mainNav .navbar-nav>li.nav-item>a {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 992px) {
+  #mainNav {
+    border-bottom: 4px solid #d42c76;
+    background: #fff;
+  }
+  #mainNav .navbar-brand {
+    padding: 10px 20px;
+    color: #d42c76;
+  }
+  #mainNav .navbar-brand:focus,
+  #mainNav .navbar-brand:hover {
+    color: #d42c76;
+  }
+  #mainNav .navbar-nav>li.nav-item>a {
+    padding: 10px 20px;
+    color: #343a40;
+  }
+  #mainNav .navbar-nav>li.nav-item>a:focus,
+  #mainNav .navbar-nav>li.nav-item>a:hover {
+    color: #d42c76;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #mainNav {
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+  }
+  #mainNav.is-fixed {
+    /* when the user scrolls down, we hide the header right above the viewport */
+    position: fixed;
+    top: -67px;
+    -webkit-transition: -webkit-transform 0.2s;
+    -moz-transition: -moz-transform 0.2s;
+    transition: transform 0.2s;
+    border-bottom: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  #mainNav.is-fixed .navbar-brand {
+    color: #d42c76;
+  }
+  #mainNav.is-fixed .navbar-brand:focus,
+  #mainNav.is-fixed .navbar-brand:hover {
+    color: #d42c76;
+  }
+  #mainNav.is-fixed .navbar-nav>li.nav-item>a {
+    color: #d42c76;
+  }
+  #mainNav.is-fixed .navbar-nav>li.nav-item>a:focus,
+  #mainNav.is-fixed .navbar-nav>li.nav-item>a:hover {
+    color: #d42c76;
+  }
+  #mainNav.is-visible {
+    /* if the user changes the scrolling direction, we show the header */
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+header.masthead {
+  margin-bottom: 50px;
+  background: no-repeat center center;
+  background-color: white;
+  background-attachment: scroll;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #212529;
+  opacity: 0.3;
+}
+
+header.masthead .page-heading,
+header.masthead .post-heading,
+header.masthead .site-heading {
+  padding: 200px 0 150px;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  header.masthead .page-heading,
+  header.masthead .post-heading,
+  header.masthead .site-heading {
+    padding: 200px 0;
+  }
+}
+
+header.masthead .page-heading,
+header.masthead .site-heading {
+  text-align: center;
+}
+
+header.masthead .page-heading h1,
+header.masthead .site-heading h1 {
+  font-size: 25px;
+  margin-top: 0;
+}
+
+header.masthead .page-heading .subheading,
+header.masthead .site-heading .subheading {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1.1;
+  display: block;
+  margin: 10px 0 0;
+  font-family: 'Kavivanar', cursive;
+  tran
+}
+
+@media only screen and (min-width: 768px) {
+  header.masthead .page-heading h1,
+  header.masthead .site-heading h1 {
+    font-size: 80px;
+  }
+}
+
+header.masthead .post-heading h1 {
+  font-size: 35px;
+}
+
+header.masthead .post-heading .meta,
+header.masthead .post-heading .subheading {
+  line-height: 1.1;
+  display: block;
+}
+
+header.masthead .post-heading .subheading {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 10px 0 30px;
+  font-family: 'Kavivanar', cursive;
+}
+
+header.masthead .post-heading .meta {
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  font-family: 'Kavivanar', cursive;
+}
+
+header.masthead .post-heading .meta a {
+  color: #d42c76;
+}
+
+@media only screen and (min-width: 768px) {
+  header.masthead .post-heading h1 {
+    font-size: 55px;
+  }
+  header.masthead .post-heading .subheading {
+    font-size: 40px;
+  }
+}
+
+.post-preview>a {
+  color: #212529;
+}
+
+.post-preview>a:focus,
+.post-preview>a:hover {
+  text-decoration: none;
+  color: #d42c76;
+}
+
+.post-preview>a>.post-title {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.post-preview>a>.post-subtitle {
+  font-weight: 300;
+  margin: 0 0 10px;
+}
+
+.post-preview>.post-meta {
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 0;
+  color: #d42c76;
+}
+
+.post-preview>.post-meta>a {
+  text-decoration: none;
+  color: #d42c76;
+}
+
+.post-preview>.post-meta>a:focus,
+.post-preview>.post-meta>a:hover {
+  text-decoration: none;
+  color: #d42c76;
+}
+
+@media only screen and (min-width: 768px) {
+  .post-preview>a>.post-title {
+    font-size: 36px;
+  }
+}
+
+.floating-label-form-group {
+  font-size: 14px;
+  position: relative;
+  margin-bottom: 0;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #d42c76;
+}
+
+.floating-label-form-group input,
+.floating-label-form-group textarea {
+  font-size: 1.5em;
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  resize: none;
+  border: none;
+  border-radius: 0;
+  background: none;
+  box-shadow: none !important;
+  font-family: 'Kavivanar', cursive;
+}
+
+.floating-label-form-group input::-webkit-input-placeholder,
+.floating-label-form-group textarea::-webkit-input-placeholder {
+  color: #d42c76;
+  font-family: 'Kavivanar', cursive;
+}
+
+.floating-label-form-group label {
+  font-size: 0.85em;
+  line-height: 1.764705882em;
+  position: relative;
+  z-index: 0;
+  top: 2em;
+  display: block;
+  margin: 0;
+  -webkit-transition: top 0.3s ease, opacity 0.3s ease;
+  -moz-transition: top 0.3s ease, opacity 0.3s ease;
+  -ms-transition: top 0.3s ease, opacity 0.3s ease;
+  transition: top 0.3s ease, opacity 0.3s ease;
+  vertical-align: middle;
+  vertical-align: baseline;
+  opacity: 0;
+  color: #d42c76;
+}
+
+.floating-label-form-group .help-block {
+  margin: 15px 0;
+}
+
+.floating-label-form-group-with-value label {
+  top: 0;
+  opacity: 1;
+}
+
+.floating-label-form-group-with-focus label {
+  color: #d42c76;
+}
+
+form .form-group:first-child .floating-label-form-group {
+  border-top: 3px solid #d42c76;
+}
+
+footer {
+  padding: 50px 0 65px;
+  background-color: #343A3C;
+}
+
+footer .list-inline {
+  margin: 0;
+  padding: 0;
+}
+
+footer .copyright {
+  font-size: 18px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  padding: 6px 0 6px 0;
+  border-radius: 75%;
+  border-bottom: 3px solid #d42c76;
+  font: 19px 'Kavivanar', cursive;
+  color: #555;
+  background: #fff;
+}
+
+.btn-primary {
+  border: none;
+  padding: 6px 9px 7px 11px;
+  border-radius: 75%;
+  border-bottom: 5px solid #d42c76;
+  font: 19px 'Kavivanar', cursive;
+  color: #555;
+  background: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #343A3C;
+  border-color: #343A3C;
+  color: #fff;
+  outline: 0;
+}
+
+.btn-lg {
+  font-size: 16px;
+  padding: 25px 35px;
+}
+
+.newComment {
+  border: 3px solid grey;
+  background-color: #d42c76;
+  padding: 1em;
+  color: white;
+}
+
+.newComment.error {
+  border: 1px solid darkred !important;
+  background-color: red !important;
+}
+
+.nav-item {
+  color: #fff;
+}
+
+.nav-link {
+  color: #fff;
+}
+
+.fa-inverse {
+  color: #fff;
+}
+
+article {
+  border-bottom: 1px solid #d42c76;
+}
+
+.alert-success {
+  color: white;
+  background-color: #d42c76;
+  border-color: #5f554f;
+}
+
+.pageAdmin {
+  text-align: center;
+  font-size: 24px;
+  font-size: 0.9em;
+}
+
+.pageAdmin>a:hover {
+  color: #d42c76;
+}
+
+.pageAdmin>a:href {
+  color: #d42c76;
+}
+
+.css-text-shadow {
+  color: #f8f9fa;
+  font-size: 80px;
+  font-weight: normal;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.76);
+  -webkit-text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.76);
+  -moz-text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.76);
+}
+
+.flexFooter {
+  display: flex;
+}
+
+.flexFooter div {
+  width: 33.3%;
+}
+
+.lire {
+  text-align: right;
+  margin-top: -2em;
+  color: #d42c76;
+}
+
+.fl-subscribe-form-inline .fl-form-field {
+  float: left;
+  margin: 0;
+  padding-right: 10px;
+  width: 33.33%;
+}
+
+.fl-node-5b2c21e6546d9 .fl-subscribe-form .fl-form-field input,
+.fl-node-5b2c21e6546d9 .fl-subscribe-form .fl-form-field input[type=text] {
+  font-size: 20px;
+  line-height: 22px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+.fl-builder-content *,
+.fl-builder-content *:before,
+.fl-builder-content *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+td {
+  vertical-align: middle;
+}
+
+.img-fluid {
+  float: left;
+  width: 250px;
+  margin-right: 1em;
+  margin-bottom: 25px;
+}
+
+.postSummary {
+  width: 100%;
+}
+
+.souligne {
+  background-color: #d42c76;
+}
+
+.logoKarine {
+  background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E%3C!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' id='Calque_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='75px' height='100px' viewBox='0 0 75 100' enable-background='new 0 0 75 100' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3ClinearGradient id='SVGID_1_' gradientUnits='userSpaceOnUse' x1='776.5684' y1='553.9326' x2='562.2178' y2='338.8332' gradientTransform='matrix(0.1784 0 0 0.1783 -73.35 -24.85)'%3E%3Cstop offset='0' style='stop-color:%236E0063'/%3E%3Cstop offset='1' style='stop-color:%23ED1E79'/%3E%3C/linearGradient%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' fill='url(%23SVGID_1_)' d='M42.985,14.698c-0.523,0.529-1.159,0.794-1.908,0.794 c-0.75,0-1.389-0.265-1.918-0.794c-0.523-0.523-0.784-1.159-0.784-1.908s0.261-1.388,0.784-1.917 c0.529-0.523,1.168-0.784,1.918-0.784c0.749,0,1.385,0.261,1.908,0.784c0.529,0.529,0.794,1.168,0.794,1.917 S43.515,14.175,42.985,14.698z M47.649,22.804c0,0.231-0.015,0.458-0.045,0.678c6.658,0.719,12.446,3.537,17.363,8.454 c5.768,5.766,8.65,12.725,8.65,20.875c0,8.15-2.883,15.105-8.65,20.866c-5.761,5.767-12.717,8.649-20.868,8.649 c-8.151,0-15.11-2.883-20.876-8.649c-4.794-4.794-7.592-10.414-8.396-16.862c-0.168,0.018-0.339,0.026-0.513,0.026 c-1.26,0-2.336-0.446-3.229-1.338c-0.892-0.892-1.337-1.968-1.337-3.228c0-1.261,0.446-2.337,1.337-3.229 c0.892-0.892,1.968-1.337,3.229-1.337c0.202,0,0.422,0.015,0.66,0.044c0.844,0.095,1.707-0.217,2.586-0.936 c0.838-0.69,1.513-1.593,2.024-2.711c0.529-1.177,0.752-2.331,0.669-3.46c-0.089-1.272-0.572-2.333-1.449-3.184 c-0.217-0.19-0.376-0.336-0.477-0.437c-1.326-1.332-1.989-2.937-1.989-4.815c0-1.873,0.663-3.475,1.989-4.807 c1.332-1.332,2.937-1.998,4.815-1.998c1.879,0,3.481,0.666,4.807,1.998l0.365,0.393c1.291,1.343,2.61,2.152,3.96,2.425 c1.189,0.244,2.307,0.057,3.353-0.562c0.963-0.565,1.721-1.397,2.274-2.497c0.553-1.094,0.79-2.228,0.709-3.402 c-0.004-0.086-0.02-0.245-0.05-0.477c-0.029-0.202-0.044-0.363-0.044-0.481c0-1.26,0.445-2.336,1.338-3.228 c0.892-0.892,1.968-1.338,3.228-1.338c1.261,0,2.337,0.446,3.229,1.338C47.203,20.467,47.649,21.543,47.649,22.804z M46.954,36.813l-9.801,9.8v-4.138c-0.868-4.258-3.558-6.579-8.071-6.964v29.908c0.902,4.417,3.593,6.738,8.071,6.965V58.945 l11.496,11.494c3.822,2.835,7.511,2.695,11.066-0.419L42.735,53.042L57.86,37.918C54.785,35.077,51.149,34.708,46.954,36.813z M17.221,1.554c0,0.434-0.155,0.803-0.464,1.106c-0.303,0.309-0.672,0.463-1.106,0.463s-0.805-0.154-1.115-0.463 c-0.303-0.303-0.455-0.672-0.455-1.106s0.151-0.805,0.455-1.115c0.31-0.303,0.681-0.455,1.115-0.455s0.803,0.151,1.106,0.455 C17.066,0.749,17.221,1.12,17.221,1.554z M31.855,4.898c0.309-0.303,0.681-0.455,1.115-0.455s0.803,0.152,1.106,0.455 c0.309,0.309,0.464,0.681,0.464,1.114c0,0.434-0.155,0.803-0.464,1.106c-0.303,0.309-0.672,0.464-1.106,0.464 s-0.806-0.155-1.115-0.464c-0.303-0.303-0.455-0.672-0.455-1.106C31.401,5.579,31.552,5.207,31.855,4.898z M11.264,15.581 c-0.303,0.309-0.672,0.464-1.106,0.464s-0.806-0.155-1.115-0.464c-0.303-0.303-0.455-0.672-0.455-1.105 c0-0.434,0.152-0.806,0.455-1.115c0.309-0.303,0.681-0.455,1.115-0.455s0.803,0.152,1.106,0.455 c0.309,0.309,0.463,0.681,0.463,1.115C11.728,14.909,11.573,15.277,11.264,15.581z M5.851,23.133c0.434,0,0.803,0.152,1.106,0.455 c0.309,0.309,0.463,0.681,0.463,1.115c0,0.434-0.154,0.802-0.463,1.105c-0.303,0.309-0.672,0.464-1.106,0.464 s-0.806-0.155-1.115-0.464c-0.303-0.303-0.455-0.672-0.455-1.105c0-0.434,0.151-0.806,0.455-1.115 C5.045,23.285,5.417,23.133,5.851,23.133z M6.02,34.485c0.529,0.529,0.794,1.168,0.794,1.917s-0.265,1.385-0.794,1.908 c-0.523,0.529-1.159,0.794-1.908,0.794c-0.75,0-1.388-0.265-1.917-0.794c-0.523-0.523-0.785-1.159-0.785-1.908 s0.261-1.388,0.785-1.917C2.724,33.962,3.362,33.7,4.112,33.7C4.861,33.7,5.497,33.962,6.02,34.485z M11.451,38.311 c0.719-0.719,1.587-1.079,2.604-1.079s1.885,0.36,2.604,1.079c0.72,0.72,1.079,1.587,1.079,2.604s-0.359,1.884-1.079,2.604 c-0.719,0.72-1.587,1.08-2.604,1.08s-1.885-0.36-2.604-1.08c-0.719-0.719-1.079-1.587-1.079-2.604S10.732,39.03,11.451,38.311z M30.357,14.145c-0.303,0.309-0.672,0.464-1.106,0.464s-0.806-0.155-1.115-0.464c-0.303-0.303-0.455-0.672-0.455-1.106 c0-0.434,0.151-0.805,0.455-1.114c0.309-0.303,0.681-0.455,1.115-0.455s0.803,0.152,1.106,0.455 c0.309,0.309,0.463,0.681,0.463,1.114C30.821,13.473,30.667,13.842,30.357,14.145z M30.446,21.921 c0.72-0.719,1.587-1.079,2.604-1.079c1.017,0,1.885,0.36,2.604,1.079c0.719,0.719,1.079,1.587,1.079,2.604 c0,1.017-0.36,1.885-1.079,2.604c-0.72,0.719-1.587,1.079-2.604,1.079c-1.017,0-1.884-0.36-2.604-1.079 c-0.719-0.719-1.079-1.587-1.079-2.604C29.368,23.508,29.727,22.64,30.446,21.921z M17.301,20.913 c0.529,0.529,0.794,1.168,0.794,1.917c0,0.75-0.265,1.385-0.794,1.909c-0.523,0.529-1.159,0.793-1.908,0.793 c-0.75,0-1.388-0.265-1.917-0.793c-0.523-0.523-0.785-1.159-0.785-1.909c0-0.749,0.261-1.388,0.785-1.917 c0.529-0.523,1.168-0.785,1.917-0.785C16.142,20.128,16.778,20.39,17.301,20.913z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' fill='%23FFFFFF' d='M46.954,36.813c4.195-2.104,7.831-1.736,10.906,1.106 L42.735,53.042l16.979,16.979c-3.556,3.114-7.244,3.254-11.066,0.419L37.153,58.945v13.438c-4.478-0.227-7.168-2.548-8.071-6.965 V35.511c4.513,0.385,7.203,2.707,8.071,6.964v4.138L46.954,36.813z M57.638,90.744v8.347c-0.001,0.242-0.083,0.45-0.245,0.624 c-0.008,0.007-0.015,0.015-0.022,0.022c-0.174,0.162-0.382,0.244-0.624,0.245h-0.848c-0.146,0.001-0.285-0.035-0.419-0.107 l0.014,0.005c-0.142-0.071-0.254-0.166-0.335-0.285c-0.003-0.003-0.006-0.007-0.009-0.01l-2.854-4.382v3.888 c-0.001,0.242-0.083,0.45-0.245,0.624c-0.008,0.007-0.015,0.015-0.022,0.022c-0.174,0.162-0.382,0.244-0.624,0.245h-0.83 c-0.252,0-0.461-0.084-0.629-0.254c-0.176-0.178-0.264-0.39-0.263-0.638v-8.347c0.001-0.244,0.086-0.449,0.254-0.615 c0.008-0.008,0.015-0.016,0.022-0.022c0.166-0.168,0.371-0.253,0.615-0.254h0.83c0.154,0,0.297,0.036,0.428,0.106 c0.131,0.071,0.238,0.172,0.321,0.304l2.871,4.458v-3.977c0.002-0.244,0.086-0.449,0.254-0.615 c0.008-0.008,0.015-0.016,0.022-0.022c0.166-0.168,0.371-0.253,0.615-0.254h0.83c0.247-0.001,0.46,0.087,0.637,0.263 C57.551,90.283,57.636,90.493,57.638,90.744z M62.658,90.106c0.166-0.168,0.371-0.253,0.615-0.254h5.369 c0.248-0.001,0.46,0.087,0.638,0.263c0.167,0.168,0.252,0.378,0.254,0.629v0.767c-0.001,0.243-0.083,0.451-0.245,0.624 c-0.008,0.008-0.015,0.015-0.022,0.022c-0.174,0.162-0.382,0.244-0.624,0.245h-3.647v1.267h3.014 c0.248-0.001,0.461,0.087,0.638,0.263c0.168,0.168,0.252,0.378,0.254,0.629v0.776c-0.001,0.242-0.082,0.45-0.245,0.624 c-0.007,0.007-0.015,0.014-0.021,0.022c-0.174,0.162-0.382,0.244-0.625,0.245h-3.014v1.213h3.647 c0.248-0.001,0.46,0.086,0.638,0.263c0.167,0.168,0.252,0.378,0.254,0.629V99.1c-0.001,0.242-0.083,0.45-0.245,0.624 c-0.008,0.007-0.015,0.015-0.022,0.022c-0.174,0.162-0.382,0.244-0.624,0.245h-5.369c-0.252,0-0.461-0.084-0.629-0.254 c-0.176-0.178-0.264-0.39-0.263-0.638v-8.355c0.001-0.244,0.086-0.449,0.254-0.615C62.644,90.121,62.65,90.113,62.658,90.106z M68.643,91.511v-0.767h-5.369V99.1h5.369v-0.767h-4.539v-2.996h3.905v-0.776h-3.905v-3.05H68.643z M43.868,89.853 c0.248-0.001,0.461,0.087,0.638,0.263c0.167,0.168,0.252,0.378,0.254,0.629V99.1c-0.001,0.242-0.083,0.45-0.245,0.624 c-0.007,0.007-0.015,0.015-0.022,0.022c-0.173,0.162-0.382,0.244-0.624,0.245h-0.829c-0.252,0-0.462-0.084-0.629-0.254 c-0.177-0.178-0.264-0.39-0.264-0.638v-8.355c0.002-0.244,0.087-0.449,0.255-0.615c0.007-0.008,0.015-0.016,0.021-0.022 c0.167-0.168,0.372-0.253,0.616-0.254H43.868z M51.404,90.744h-0.83v8.347h0.83v-6.894l4.494,6.894h0.848v-8.347h-0.83v7 L51.404,90.744z M43.868,90.744h-0.829V99.1h0.829V90.744z M7.474,89.853c0.248-0.001,0.46,0.087,0.638,0.263 c0.167,0.168,0.252,0.378,0.254,0.629v2.697l2.564-3.25v0.004c0.081-0.105,0.186-0.189,0.312-0.249 c0.006-0.004,0.012-0.007,0.018-0.009c0.118-0.057,0.241-0.085,0.37-0.085h1.07c0.243,0,0.449,0.085,0.62,0.254l-0.026-0.022 c0.186,0.161,0.285,0.364,0.298,0.611c0.013,0.218-0.049,0.418-0.187,0.602c-0.005,0.006-0.009,0.012-0.014,0.018l-2.287,2.778 l2.711,4.557c0.104,0.168,0.144,0.36,0.121,0.575c-0.002,0.019-0.005,0.038-0.009,0.058c-0.043,0.188-0.137,0.349-0.281,0.481 c-0.009,0.008-0.018,0.016-0.027,0.022c-0.172,0.139-0.363,0.207-0.571,0.205h-0.99c-0.155,0-0.297-0.036-0.428-0.106 c-0.002-0.004-0.005-0.007-0.009-0.01c-0.136-0.078-0.243-0.179-0.321-0.303c-0.002-0.005-0.005-0.01-0.009-0.014l-1.966-3.308 l-0.958,1.163V99.1c-0.001,0.242-0.083,0.45-0.246,0.624c-0.007,0.007-0.014,0.015-0.022,0.022 c-0.174,0.162-0.382,0.244-0.625,0.245H6.645c-0.252,0-0.462-0.084-0.629-0.254c-0.176-0.178-0.264-0.39-0.263-0.638v-8.355 c0.001-0.244,0.086-0.449,0.254-0.615c0.007-0.008,0.015-0.016,0.022-0.022c0.167-0.168,0.372-0.253,0.616-0.254H7.474z M10.016,94.008l2.684-3.264h-1.07l-4.156,5.261v-5.261H6.645V99.1h0.829v-2.007l1.971-2.381l2.613,4.388h0.99L10.016,94.008z M34.058,89.844c0.648,0,1.217,0.139,1.708,0.414l-0.004-0.004c0.517,0.278,0.918,0.68,1.204,1.203l-0.004-0.004 c0.276,0.483,0.415,1.05,0.415,1.698c-0.001,0.642-0.139,1.208-0.415,1.699l0.004-0.005c-0.216,0.395-0.5,0.72-0.852,0.977 l1.507,2.867l-0.004-0.005c0.096,0.175,0.127,0.366,0.093,0.575c-0.002,0.011-0.005,0.021-0.009,0.031 c-0.043,0.188-0.137,0.349-0.281,0.481c-0.009,0.01-0.018,0.019-0.027,0.027c-0.164,0.128-0.351,0.191-0.562,0.191h-0.99 c-0.163-0.001-0.315-0.042-0.455-0.125c-0.007-0.004-0.014-0.009-0.022-0.014c-0.14-0.092-0.244-0.208-0.312-0.348l-1.534-3.045 h-1.057v2.64c-0.001,0.242-0.083,0.45-0.245,0.624c-0.007,0.007-0.015,0.015-0.022,0.022c-0.173,0.162-0.381,0.244-0.624,0.245 h-0.83c-0.252,0-0.461-0.084-0.628-0.254c-0.176-0.178-0.264-0.39-0.263-0.638v-8.364c0.001-0.244,0.086-0.449,0.254-0.615 c0.007-0.008,0.015-0.016,0.022-0.022c0.166-0.168,0.371-0.253,0.615-0.254H34.058z M34.852,91.618 c0.398,0.398,0.598,0.877,0.598,1.436s-0.199,1.037-0.598,1.436s-0.877,0.598-1.436,0.598c-0.559,0-1.037-0.199-1.436-0.598 s-0.598-0.877-0.598-1.436s0.199-1.037,0.598-1.436s0.877-0.598,1.436-0.598C33.975,91.021,34.454,91.22,34.852,91.618z M32.613,92.256c-0.225,0.221-0.338,0.487-0.338,0.798c0.001,0.312,0.116,0.58,0.343,0.807c0.221,0.223,0.487,0.334,0.798,0.335 c0.312,0,0.581-0.11,0.807-0.33l0.005-0.005c0.22-0.227,0.33-0.495,0.33-0.807c0-0.311-0.112-0.577-0.334-0.798 c-0.226-0.228-0.496-0.342-0.807-0.344c-0.31,0.001-0.577,0.113-0.798,0.339L32.613,92.256z M31.57,95.568h2.497l1.774,3.531h0.99 l-1.926-3.656c0.148-0.048,0.288-0.106,0.419-0.179c0.369-0.195,0.654-0.479,0.856-0.847s0.303-0.791,0.303-1.267 c0-0.481-0.101-0.903-0.303-1.266c-0.202-0.369-0.484-0.651-0.847-0.848c-0.369-0.202-0.793-0.303-1.275-0.303h-3.317V99.1h0.83 V95.568z M21.93,89.853c0.188,0,0.36,0.054,0.513,0.16c0.004,0.004,0.009,0.007,0.014,0.009c0.137,0.101,0.24,0.236,0.308,0.406 c0.001,0.003,0.003,0.006,0.004,0.009l3.081,8.347c0.001,0.003,0.003,0.006,0.004,0.009c0.071,0.183,0.075,0.371,0.014,0.566 c-0.058,0.185-0.162,0.335-0.312,0.45c-0.156,0.12-0.336,0.181-0.54,0.183h-0.919c-0.196-0.002-0.369-0.059-0.517-0.17 c-0.159-0.108-0.268-0.251-0.326-0.428l0.005,0.005l-0.509-1.44h-2.63l-0.508,1.44l0.004-0.005 c-0.062,0.183-0.171,0.328-0.33,0.438c-0.153,0.106-0.324,0.159-0.513,0.16h-0.919c-0.204-0.002-0.383-0.063-0.539-0.183 c-0.151-0.115-0.255-0.266-0.313-0.45c-0.062-0.195-0.057-0.384,0.014-0.566l3.077-8.355c0.002-0.003,0.003-0.006,0.004-0.009 c0.067-0.168,0.173-0.304,0.316-0.406c0.004-0.003,0.009-0.006,0.014-0.009c0.145-0.104,0.313-0.158,0.504-0.16H21.93z M21.93,90.744h-0.999L17.854,99.1h0.919l0.722-2.033h3.879l0.722,2.033h0.919L21.93,90.744z M23.044,96.229h-3.228l1.614-4.183 L23.044,96.229z M21.431,94.512l-0.317,0.825h0.638L21.431,94.512z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M68.643,91.511h-4.539v3.05h3.905v0.776h-3.905v2.996h4.539V99.1h-5.369v-8.355 h5.369V91.511z M43.868,90.744V99.1h-0.829v-8.355H43.868z M51.404,90.744l4.512,7v-7h0.83v8.347h-0.848l-4.494-6.894v6.894h-0.83 v-8.347H51.404z M10.016,94.008l3.032,5.092h-0.99l-2.613-4.388l-1.971,2.381V99.1H6.645v-8.355h0.829v5.261l4.156-5.261h1.07 L10.016,94.008z M34.852,91.618c-0.398-0.398-0.877-0.598-1.436-0.598c-0.559,0-1.037,0.199-1.436,0.598s-0.598,0.877-0.598,1.436 s0.199,1.037,0.598,1.436s0.877,0.598,1.436,0.598c0.559,0,1.038-0.199,1.436-0.598s0.598-0.877,0.598-1.436 S35.25,92.017,34.852,91.618z M31.57,95.568V99.1h-0.83v-8.364h3.317c0.482,0,0.907,0.101,1.275,0.303 c0.363,0.196,0.645,0.479,0.847,0.848c0.202,0.362,0.303,0.784,0.303,1.266c0,0.476-0.101,0.898-0.303,1.267 s-0.487,0.651-0.856,0.847c-0.131,0.072-0.271,0.131-0.419,0.179l1.926,3.656h-0.99l-1.774-3.531H31.57z M21.93,90.744 l3.086,8.355h-0.919l-0.722-2.033h-3.879L18.773,99.1h-0.919l3.077-8.355H21.93z M23.044,96.229l-1.614-4.183l-1.614,4.183H23.044 z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+}
+
+.logoCentral {
+  width: 22vh;
+  height: 30vh;
+  margin: auto;
+  background-position: center;
+  background-size: 100%;
+}
+
+.logoHeader {
+  padding-left: 15vh !important;
+  background-size: contain;
+}
+
+hr {
+  border-bottom: 4px solid #d42c76;
+}
+
+.text-muted {
+  color: #fff!important;
+}
+
+.subheading {
+  color: #fff;
+}
+
+.allComments {
+  border-bottom: 4px solid #d42c76;
+  background: #ac9797;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+  color: grey;
+}
+
+.formError {
+  background-color: #d42c76;
+  padding: 1em;
+}
+
+.formSuccess {
+  background-color: #00FF00AA;
+  padding: 1em;
+}
+
+.comment {
+  color: grey;
+}
+
+#contactForm {
+  margin-top: 2em;
+}
+
+.index_welcome{
+  text-align: center;
+  font-size: x-large;
+}

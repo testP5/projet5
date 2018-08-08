@@ -1,0 +1,42 @@
+<div>
+  <form method="post" action="{{ url }}?action={{ action }}">
+    <input id="id" name="id" type="hidden" value="{{ id }}">
+    <h1><input type="textaeara" name="title" value="{{ title }}"></h1>
+    <p>
+      <textarea id ="content" name="content">
+      {{ content }}
+    </textarea>
+    </p>
+    <p>résumé :<br>
+    <textarea name="resume" class="form_resume">{{ summary }}</textarea></p>
+    <button>publier</button>
+  </form>
+</div>
+<style type="text/css">
+  .form_resume{
+    font-style: italic;
+  }
+</style>
+
+
+  <!-- tinyMCE editor -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tinymce@4.8.1/tinymce.min.js"></script>
+
+
+<script>
+  tinymce.init({
+    selector: '#content',
+    height: 500,
+    menubar: false,
+    plugins: [
+      'advlist autolink lists link image charmap print preview anchor textcolor',
+      'searchreplace visualblocks code fullscreen',
+      'insertdatetime media table contextmenu paste code help wordcount'
+    ],
+    toolbar: 'code | media | insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+    content_css: [
+      '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+      '//www.tinymce.com/css/codepen.min.css']
+  });
+</script>

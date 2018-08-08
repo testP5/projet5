@@ -20,13 +20,9 @@ function getUserName($user){
 
 
 //xss mitigation functions
-function xssafe($data,$encoding='UTF-8')
+function xecho($data,$encoding='UTF-8')
 {
-   return htmlspecialchars($data,ENT_QUOTES | ENT_HTML401,$encoding);
-}
-function xecho($data)
-{
-   echo xssafe($data);
+   echo htmlspecialchars($data,ENT_QUOTES | ENT_HTML401,$encoding);
 }
 
 ?>

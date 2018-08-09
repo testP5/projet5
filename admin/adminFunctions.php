@@ -1,6 +1,6 @@
 <?php
 $page = new Page();
-require_once(../functions/tools.php)
+// require_once("../functions/tools.php");
 
 /****************************
           classes
@@ -21,7 +21,7 @@ class Page {
         )
       );
     };
-    xecho (str_replace(array_keys($change), $change, file_get_contents("pages/$toShow.html")));
+    esc_html (str_replace(array_keys($change), $change, file_get_contents("pages/$toShow.html")));
     $bdd = null;                   //fermeture de la connexion
     exit();                        //termine le script php
   }
@@ -226,7 +226,7 @@ function savePost(){
         'id'           => filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT),
         'idAuthor'     => $_SESSION['userID'],
         'title'        => filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING),
-        'content'      => filter_input(INPUT_POST, 'content', FILTER_SANITIZE_STRING),
+        'content'      => filter_input(INPUT_POST, 'content', FILTER_SANITIZE_FULL_SPECIAL_CHARS),
         'summary'      => filter_input(INPUT_POST, 'resume', FILTER_SANITIZE_STRING),
         'creationDate' => date('Y-m-d')
       )

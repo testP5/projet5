@@ -24,7 +24,7 @@
       </div>
     </header>
     <div class="container">
-      <p class="index_welcome">Bonjour ! Nous sommes le <?php echo esc_html(date('d/m/Y')); ?> , bienvenue sur mon blog.</p>
+      <p class="index_welcome">Bonjour ! Bienvenue sur mon blog.</p>
       <div class="row" id="a_propos">
         <div class="col-lg-8 col-md-10 mx-auto">
           <img class="img-fluid" src="img/child1.jpg">                 

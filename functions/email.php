@@ -75,9 +75,9 @@ class contactForm {
   function showActualContactForm($err){  //retourne le formulaire tel qu'il a été saisi avec un message d'erreur
     $change = array(
       "{{ anchor }}"    => $this -> _anchor,
-      "{{ email }}"     => $_POST['votremail'],
-      "{{ message }}"   => $_POST['message'],
-      "{{ applicant }}" => $_POST['applicant'],
+      "{{ email }}"     => filter_input(INPUT_POST, 'votremail', FILTER_SANITIZE_EMAIL),
+      "{{ message }}"   => filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING)
+      "{{ applicant }}" => filter_input(INPUT_POST, 'applicant', FILTER_SANITIZE_STRING);
       "{{ url }}"       => htmlspecialchars($_SERVER['PHP_SELF'])
     );
     echo esc_html(str_replace(array_keys($change), $change, file_get_contents("fragments/contactForm.html")));

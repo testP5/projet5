@@ -77,7 +77,7 @@ class contactForm {
       "{{ anchor }}"    => $this -> _anchor,
       "{{ email }}"     => filter_input(INPUT_POST, 'votremail', FILTER_SANITIZE_EMAIL),
       "{{ message }}"   => filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING)
-      "{{ applicant }}" => filter_input(INPUT_POST, 'applicant', FILTER_SANITIZE_STRING);
+      "{{ applicant }}" => filter_input(INPUT_POST, 'applicant', FILTER_SANITIZE_STRING),
       "{{ url }}"       => htmlspecialchars($_SERVER['PHP_SELF'])
     );
     esc_html(str_replace(array_keys($change), $change, file_get_contents("fragments/contactForm.html")));

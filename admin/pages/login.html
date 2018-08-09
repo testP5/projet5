@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>P5 Karine Admin</title>
+		<link type="text/css" href="css/style-login.css" rel="stylesheet" media="all" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	</head>
+	<body>
+		<h1>Identification</h1>
+		<form method="post" action="index.php?action=login">
+			<fieldset>
+				<label for="username">Utilisateur</label>
+				<input type="text" name="username" id="username" placeholder="utilisateur" />
+				<label for="password">Mot de passe</label>
+				<input type="password" name="password" id="password" placeholder="mot de passe" />
+				<input type="submit" id="submit" value="Connexion" />
+			</fieldset>
+		</form>
+		<div class="msgError">{{ errors }}</div>
+	</body>
+</html>
+

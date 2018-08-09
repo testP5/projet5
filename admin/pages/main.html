@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <!-- <link rel="shortcut icon" href="img/littleLogo.png"> -->
+
+  <title>P5 Karine Admin</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
+  
+  <!-- Template Styles -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  
+  <!-- CSS Reset -->
+  <link rel="stylesheet" href="css/normalize.css">
+  
+  <!-- Milligram CSS minified -->
+  <link rel="stylesheet" href="css/milligram.min.css">
+  
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <div class="navbar">
+    <div class="row">
+      <div class="column column-30 col-site-title"><a href="../index.php" class="site-title float-left">-Blog PHP developpement-</a></div>
+      <div class="column column-40 col-search"><a href="#" class="search-btn fa fa-search"></a>
+        <input type="text" name="" value="" placeholder="Search..." />
+      </div>
+      <div class="column column-30">
+        <div class="user-section">
+            <div class="username">
+              <h4>{{ userName }}</h4>
+              <small>{{ groupName }}</small>
+            </div>
+      </div>
+      </div>
+    </div>
+  </div>
+    
+  <div class="row">
+    <div id="sidebar" class="column">
+      <h5>Navigation</h5>
+      <ul>
+        <li><a href="index.php?action=welcome"><em class="fa fa-home"></em>Accueil</a></li>
+        <li><a href="index.php?action=listPosts"><em class="fa fa-hand-o-up"></em> Posts</a></li>
+        <li><a href="index.php?action=listComments"><em class="fa fa-columns"></em>Commentaires</a></li>        
+      </ul>
+    </div>
+    <section id="main-content" class="column column-offset-20">
+      <div class="row grid-responsive">
+        <div class="column page-heading">
+          <div class="large-card">
+            {{ page }}
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html> 

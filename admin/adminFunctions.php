@@ -194,7 +194,7 @@ function logout($msg=null){
 }
 
 function memberList(){
-  global $bdd, $page;
+  global $bdd;
   $chaine = "";
   try {
   $reqc = $bdd->prepare('SELECT firstName, lastName, email, role FROM `user`');

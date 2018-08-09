@@ -69,7 +69,7 @@ class contactForm {
       "{{ applicant }}" => "",
       "{{ url }}"       => htmlspecialchars($_SERVER['PHP_SELF'])
     );
-    echo str_replace(array_keys($change), $change, file_get_contents("fragments/contactForm.html"));
+    esc_html(str_replace(array_keys($change), $change, file_get_contents("fragments/contactForm.html")));
   }
 
   function showActualContactForm($err){  //retourne le formulaire tel qu'il a été saisi avec un message d'erreur
@@ -80,8 +80,8 @@ class contactForm {
       "{{ applicant }}" => filter_input(INPUT_POST, 'applicant', FILTER_SANITIZE_STRING);
       "{{ url }}"       => htmlspecialchars($_SERVER['PHP_SELF'])
     );
-    echo esc_html(str_replace(array_keys($change), $change, file_get_contents("fragments/contactForm.html")));
-    echo '<div class="formError"><ul>'.$err.'</ul></div>';
+    esc_html(str_replace(array_keys($change), $change, file_get_contents("fragments/contactForm.html")));
+    esc_html('<div class="formError"><ul>'.$err.'</ul></div>');
   }
 }
 

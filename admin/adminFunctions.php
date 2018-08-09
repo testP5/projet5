@@ -32,7 +32,7 @@ class Page {
         fonctions
 ****************************/
 function addPost(){
-  global $bdd, $page;
+  global $page;
   $change = array(
     '{{ id }}'       => $_GET['id'],
     '{{ title }}'    => "",
